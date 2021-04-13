@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", getWeather());
 
 // weather.changeLocation("glendale", "CA");
 
+// Get weather and paint ui
 function getWeather() {
   weather
     .getWeather()
     .then((results) => {
-      console.log(results);
+      // console.log(results);
       ui.paint(results);
     })
     .catch((err) => console.log(err));
